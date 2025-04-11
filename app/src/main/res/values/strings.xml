@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tic Tac Toe AI</string>
+    <string name="app_name">TicTacAI</string>
 
     <string-array name="difficulty_levels">
         <item>Easy</item>
