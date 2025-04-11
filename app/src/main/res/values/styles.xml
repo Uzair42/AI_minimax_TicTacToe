@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="TicButton">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:background">@color/aqua</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+</resources>
