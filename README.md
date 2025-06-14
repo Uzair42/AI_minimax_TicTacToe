@@ -127,9 +127,9 @@ _Android Enthusiast, AI Learner & Full Stack Explorer_
 ---
 
 ## 📸 Screenshots
-*ScreenShot will be visible soon ...
 
-> _(You can add screenshots here when we generate complete zip file with UI for showcasing)_
+
+> _(*ScreenShot will be visible soon ...)_
 
 ---
 
