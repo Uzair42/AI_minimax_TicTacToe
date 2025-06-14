@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp"
+    android:background="@color/jaman"
+    android:gravity="center"
+    >
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/txtTurn"
+        android:background="@drawable/button"
+
+        android:text="Player 1 Turn (X)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+
+        android:gravity="center"
+        android:textColor="#0B0B0B"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Score -->
+    <LinearLayout
+        android:background="@color/jaman"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal" android:gravity="center">
+
+        <TextView android:id="@+id/txtP1Score"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="P1: 0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FF9800"
+            android:layout_marginEnd="50dp"/>
+
+        <TextView android:id="@+id/txtP2Score"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="P2: 0"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#FFEB3B"/>
+
+    </LinearLayout>
+
+    <!-- Board -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn00" style="@style/TicButton" android:background="@drawable/button"/>
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn01" style="@style/TicButton" android:background="@drawable/button"/>
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn02" style="@style/TicButton" android:background="@drawable/button"/>
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn10" style="@style/TicButton" android:background="@drawable/button"/>
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn11" style="@style/TicButton" android:background="@drawable/button"/>
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn12" style="@style/TicButton" android:background="@drawable/button"/>
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn20" style="@style/TicButton" android:background="@drawable/button"/>
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn21" style="@style/TicButton" android:background="@drawable/button"/>
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/btn22" style="@style/TicButton" android:background="@drawable/button"/>
+
+    </GridLayout>
+
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnResetScore"
+        android:text="Reset Scores"
+        android:background="@drawable/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"/>
+</LinearLayout>
