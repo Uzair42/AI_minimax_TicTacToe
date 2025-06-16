@@ -1,7 +1,12 @@
 package com.mu42.ticktac
 
+import android.content.Context
 import android.graphics.Color
+import android.media.MediaPlayer
+import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -19,10 +24,14 @@ class TwoPlayerActivity : AppCompatActivity() {
     private var p1Score = 0
     private var p2Score = 0
     private lateinit var buttons: Array<Array<Button>>
+     lateinit var vibrator :Vibrator
+     lateinit var mediaPlayer :MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_two_player)
+       vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        mediaPlayer= MediaPlayer.create(this, R.raw.beep)
 
         buttons = Array(3) { row ->
             Array(3) { col ->
@@ -43,6 +52,12 @@ class TwoPlayerActivity : AppCompatActivity() {
 
     private fun handleClick(row: Int, col: Int) {
         if (board[row][col] != ' ') return
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            vibrator.vibrate(100)
+        }
+        MediaPlayer.create(this, R.raw.beep).start()
 
         board[row][col] = if (player1Turn) 'x' else 'o'
         buttons[row][col].text = board[row][col].toString()
@@ -68,10 +83,7 @@ class TwoPlayerActivity : AppCompatActivity() {
     }
 
     private fun showWinner(message: String) {
-        AlertDialog.Builder(this)
-            .setTitle("Game Result")
-            .setMessage("$message\nP1 Score: $p1Score\nP2 Score: $p2Score")
-            .setPositiveButton("OK") { _, _ -> }
+       Toast.makeText(this,"$message",Toast.LENGTH_LONG)
             .show()
     }
 
@@ -99,8 +111,8 @@ class TwoPlayerActivity : AppCompatActivity() {
     }
 
     private fun updateScoreUI() {
-        findViewById<TextView>(R.id.txtP1Score).text = "P1: $p1Score"
-        findViewById<TextView>(R.id.txtP2Score).text = "P2: $p2Score"
+        findViewById<TextView>(R.id.txtP1Score).text = " $p1Score"
+        findViewById<TextView>(R.id.txtP2Score).text = " $p2Score"
     }
 
     private fun updateTurnUI() {
