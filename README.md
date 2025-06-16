@@ -22,6 +22,7 @@ The project demonstrates clean architecture, separation of concerns, game logic 
 - 🟥 **2-Player Mode**:
   - Real-time scoreboard
   - Color-coded turn indicators
+  - Add Vibration and Sound on Click of Each Player
   - Winner announcements with match results
   - Score reset option
 - 🟪 **AI Mode**:
