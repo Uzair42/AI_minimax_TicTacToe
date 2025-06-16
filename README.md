@@ -130,6 +130,13 @@ _Android Enthusiast, AI Learner & Full Stack Explorer_
 
 
 > _(*ScreenShot will be visible soon ...)_
+> ![image](https://github.com/user-attachments/assets/6addca6f-e031-4eeb-b80c-51a4f32210c3)
+
+> ![image](https://github.com/user-attachments/assets/b534bb2a-2811-4abd-92a0-6033c70e5f1f)
+> ![image](https://github.com/user-attachments/assets/2728d689-3de9-416f-abd0-b34a9108311b)
+
+
+
 
 ---
 
